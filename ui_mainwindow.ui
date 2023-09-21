@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="3">
+     <widget class="QLabel" name="process">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+      QLabel{border:none;color:rgb(61, 61, 61);}
+      QLabel{
+        border:none;
+        border-bottom:1px solid rgb(85, 170, 255);
+        font-size:20px;
+        font-weight:700;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+      }
+      QLabel:hover{border-left:4px solid rgb(85, 170, 255);font-weight:700;}</string>
+      </property>
+      <property name="text">
+       <string>处理过程</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" colspan="3">
+     <widget class="QTextEdit" name="showprocess">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+border:1px groove gray;border-radius:6px;padding:1px 1px;border-style: outset;}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="processdel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}</string>
+      </property>
+      <property name="text">
+       <string>清空</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="4">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="4" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="generatefile">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>1777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>查看词库</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="filterrun">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>开始处理</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="filterlabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+      QPushButton{border:none;color:rgb(61, 61, 61);}
+      QPushButton{
+        border:none;
+        border-bottom:1px solid rgb(85, 170, 255);
+        font-size:20px;
+        font-weight:700;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+      }
+      QPushButton#left_button:hover{border-left:4px solid rgb(85, 170, 255);font-weight:700;}</string>
+        </property>
+        <property name="text">
+         <string>过滤</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="generaterun">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>开始处理</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="generatelabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+      QPushButton{border:none;color:rgb(61, 61, 61);}
+      QPushButton{
+        border:none;
+        border-bottom:1px solid rgb(85, 170, 255);
+        font-size:20px;
+        font-weight:700;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+      }
+      QPushButton#left_button:hover{border-left:4px solid rgb(85, 170, 255);font-weight:700;}</string>
+        </property>
+        <property name="text">
+         <string>扩充</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="filterfile">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>选择文件</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2" colspan="3">
+     <widget class="QTextEdit" name="showresult">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+border:1px groove gray;border-radius:6px;padding:1px 1px;border-style: outset;}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="4">
+     <widget class="QTextEdit" name="showfile">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+border:1px groove gray;border-radius:6px;padding:1px 1px;border-style: outset;}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLabel" name="result">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{border:none;color:rgb(61, 61, 61);}
+QLabel{
+        border:none;
+        border-bottom:1px solid rgb(85, 170, 255);
+        font-size:20px;
+        font-weight:700;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;}
+QLabel:hover{border-left:4px solid rgb(85, 170, 255);font-weight:700;}</string>
+      </property>
+      <property name="text">
+       <string>处理结果</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="resultdel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(174, 213, 255);
+font-family:'宋体'; 
+border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+    background-color:rgb(176, 196, 222);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(135, 206, 250);
+    padding-left:6px;
+    padding-top:3px;
+}</string>
+      </property>
+      <property name="text">
+       <string>清空</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>530</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="files">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen"/>
+    <addaction name="actionclose"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <widget class="QMenu" name="logs">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>日志</string>
+    </property>
+    <addaction name="logopen"/>
+    <addaction name="logclose"/>
+   </widget>
+   <widget class="QMenu" name="help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionabout"/>
+   </widget>
+   <addaction name="files"/>
+   <addaction name="logs"/>
+   <addaction name="help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionclose">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="logopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="logclose">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionnew">
+   <property name="text">
+    <string>new</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
